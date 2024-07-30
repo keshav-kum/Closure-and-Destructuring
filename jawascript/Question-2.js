@@ -1,13 +1,18 @@
-// Q2.Generate numbers between any 2 given numbers.
-// Ex.
-// const num1=10;
-// const num2=25;
+let order = {
+    orderId : "123456",
+    productName:"Laptop",
+    quantity:2
+};
 
-// Output:11,12,13,.....25
+// Without destructuring
+console.log("Without Destructuring:");
+console.log("Order ID:", order.orderId);
+console.log("Product Name:", order.productName);
+console.log("quantity:", order.quantity);
 
-// let num1 = 10;
-// let num2 = 25;
-
-// for(let i = num1++; i <= num2; i++){
-// console.log(i)
-// }
+// With destructuring
+let {orderId, productName, quantity} = order;
+console.log("\nWith Destructuring:");
+console.log("Order ID:", orderId);
+console.log("Prodect Name:", productName);
+console.log("quantity:", quantity);

@@ -1,19 +1,39 @@
-// Q6. you are working on an e-commerce platform. Write a JavaScript program that takes the payment method ("credit", "debit", or "paypal") as input and uses a switch statement to determine and print the processing fee associated with each payment method. For example, "credit" may have a processing fee of 2%, "debit" 1.5% and "paypal" 3%.
+// Task 1: Create Playist
+function createPlaylist(playlistName) {
+    let playlist = [];
 
+    return {
+        addSong: function (songName, artist) {
+            playlist.push({ songName, artist })
+        },
 
+        listSongs: function () {
+            if (playlist.length === 0) {
+                console.log(`${playlistName} playlist is empty.`)
+            } else {
+                console.log(`${playlistName} Playlist:${playlist.map(song => `${song.songName} by ${song.artist}`).join(', ')}`)
+            }
+        }
 
-// let paymentMode = "credit";
-// switch(paymentMode){
-//     case "credit":
-//         console.log("processing fee for credit payment 2%");
-//         break;
-//     case "debit":
-//         console.log("processing fee for debit payment 1.5%");
-//         break;
-//     case "paypal":
-//         console.log("processing fee for paypal payment 3%");
-//         break;
-//         default:
-//             console.log("Invalid payment method");
+    };
+}
 
-// }
+// Task 2: Add Song to Playlist
+
+function addSong (playlist, songName, artist){
+    playlist.addSong(songName,artist)
+}
+
+// Task 3: List Songs in Playlist
+
+function listSongs(playlist){
+    playlist.listSongs();
+}
+
+const myPlaylist = createPlaylist('My favorites');
+
+addSong(myPlaylist, "song1", "Artist1");
+addSong(myPlaylist, "Song2", "Artist2");
+addSong(myPlaylist, "song3", "Artist3");
+
+listSongs(myPlaylist);

@@ -1,36 +1,63 @@
-Q1.Write a program that grades students based on their marks.
-.if greater than 90 then A grade
-.if between 70 and 90 then a B grade
-.if between 50 and 70 then a C grade
-.if Below 50 then an F grade
+1. You are building a counter application that tracks the number of times a button is clicked. Implement the counter using closure.
 
-Q2.Generate numbers between any 2 given numbers.
-Ex.
-const num1=10;
-const num2=25;
+2.  You have an object representing a customer order with properties orderId, productName, and quantity. 
+Use destructuring to extract and print these properties.
 
-Output:11,12,13,.....25
+let order = {
+    orderId:"12345",
+    productName:"Laptop"
+    quantity:2;
+};
 
+3.  In this coding challenge let's try to implement the cart feature using javascript closure. Using JS closures 
+try to create a cart array and return a function to getCartItems.
 
-Q3.Use a nearest ternary operatorto check than a numbers is positive , nagative or zero. you have to print "posive" if the number is positive and similarly for negative and zero.
+const cart = shoppingCart();
+console.log('Cart Items:', cart.getCartItems());
 
+4. . Continuing the previous coding challenge, now let’s implement the add to cart feature. On calling add to 
+cart closure function, the object of productId, name, quantity and price should be added to the cartItem. 
+Note that if duplicate items with same prouductId is added, the product quantity must be incremented. Use 
+javascript closures to achieve the output.
 
+const cart = shoppingCart();
+console.log('Cart Items:', cart.getCartItems());
+  
+  const product1 = {id:1, name:'product 1', price:10};
+  const product1 = {id:2, name:'product 2', price:20};
 
-Q4.Describe the usage of the comma operator in JavaScript and provide an example.
+  cart.addItem(product1);
+  cart.addItem(product1);
+  cart.addItem(product1);
 
+  console.log('Cart Items:', cart.getCartItems());
 
-Q5.you're creating a basic login system. Make a login function with two things: a username and a password. Check if the username is "admin" and the passwordis "12345". if they're both correct,show "Login successful";if not show "invalid credentials."
+ 5. Continuing the previous coding challenge, now let’s implement the remove item from cart feature. On 
+calling the remove item closure function, the specified productId item must be removed from cartItems 
+array.Use javascript closures to achieve the output.
 
-let username = "admin";
-let password = "12345";
+const cart = shoppingCart();
+console.log('Cart Items:', cart.getCartItems());
+  
+  const product1 = {id:1, name:'product 1', price:10};
+  const product1 = {id:2, name:'product 2', price:20};
 
-Login successful
+  cart.addItem(product1);
+  cart.addItem(product1);
+  cart.addItem(product1);
 
+  console.log('Cart Items:', cart.getCartItems());
 
-Q6. you are working on an e-commerce platform. Write a JavaScript program that takes the payment method ("credit", "debit", or "paypal") as input and uses a switch statement to determine and print the processing fee associated with each payment method. For example, "credi" may have a processing fee of 2%, "debit" 1.5% and "paypal" 3%.
+  cart.removeItem(2);
+  console.log('Cart Items:', cart.getCartItems());
 
-Q7. you are building a weather application. Write a JavaScript program that takes  the current temprature as input and uses the conditional (ternary) operator to determine and print the weather condition. if the temprature is above 30 degree celcius, the condition is "Hot"; otherwise, it is "Moderate".
+6.You are developing a music playlist management system. Implement functions that leverage closures and higher-order functions to perform common playlist operations.
+  Task 1:  Create a function createPlaylist that takes a playlist name as a parameter and returns a closure. This 
+closure should allow adding and listing songs for the given playlist.
 
+Task 2: Create a function addSong that takes a song name and artist as parameters and adds the song to the 
+specified playlist. Use the closure created in TASK 1.
 
-Q8. you are creating a program to calculate the sum of numbers. Write jawascript program that takes a positive integer as input and usage a do-while loop to calculate and print the sum of all numbers from 1 to the given integer.
+Task 3:  Create a function listSongs that lists all the songs in a specified playlist. Use the closure created in the Task 1
+
 
